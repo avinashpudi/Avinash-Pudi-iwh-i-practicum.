@@ -1,0 +1,13 @@
+app.use(express.static(__dirname + '/public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.set('view engine', 'pug');
+
+
+
+res.render('contacts', { title: 'Contacts | HubSpot APIs', data }); 
+res.json(data); 
+
+https://api.hubapi.com/crm/v3/schemas/p_pets
+
+https://api.hubspot.com/crm/v3/objects/p_pets?properties=email
