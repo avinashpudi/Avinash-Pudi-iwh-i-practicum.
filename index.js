@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const app = express();
@@ -12,7 +13,7 @@ app.set('view engine', 'pug');
 
 // Please include the private app access token in your  repo BUT only an access token built in a TEST ACCOUNT.
 // Don't do this practicum in your normal account.
-const PRIVATE_APP_ACCESS = 'pat-na1-af0eb0f0-dc1e-40f6-8b94-79378df73a03';
+const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 
 // Route 1 - Create a new app.get route for the homepage to call your custom object data.
 app.get('/', async (req, res) => {
